@@ -9,7 +9,7 @@ def pytest_addoption(parser):
         '--suppress-no-test-exit-code',
         action='store_true',
         default=False,
-        help='Set the value for the fixture "bar".'
+        help='Suppress the "no tests collected" exit code.'
     )
 
 
