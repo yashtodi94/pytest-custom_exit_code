@@ -22,8 +22,6 @@ Exit pytest test session with custom exit code in different scenarios
 
 ----
 
-This `pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`_'s `cookiecutter-pytest-plugin`_ template.
-
 
 Features
 --------
@@ -48,7 +46,7 @@ You can install "pytest-custom_exit_code" via `pip`_ from `PyPI`_::
 Usage
 -----
 
-* TODO
+* `pytest --suppress-no-test-exit-code`
 
 Contributing
 ------------
@@ -78,3 +76,9 @@ If you encounter any problems, please `file an issue`_ along with a detailed des
 .. _`tox`: https://tox.readthedocs.io/en/latest/
 .. _`pip`: https://pypi.org/project/pip/
 .. _`PyPI`: https://pypi.org/project
+
+
+Acknowledegements
+-----------------
+
+This `pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`_'s `cookiecutter-pytest-plugin`_ template.
