@@ -46,7 +46,9 @@ You can install "pytest-custom_exit_code" via `pip`_ from `PyPI`_::
 Usage
 -----
 
-* `pytest --suppress-no-test-exit-code`
+* ::
+
+    pytest --suppress-no-test-exit-code
 
 Contributing
 ------------
