@@ -6,17 +6,29 @@ language: python
 matrix:
     include:
       - python: 2.7
-        env: TOX_ENV=py27
+        env: TOX_ENV=py27-pytest4
+      - python: 2.7
+        env: TOX_ENV=py27-pytest5
       - python: 3.4
-        env: TOX_ENV=py34
+        env: TOX_ENV=py34-pytest4
+      - python: 3.4
+        env: TOX_ENV=py34-pytest5
       - python: 3.5
-        env: TOX_ENV=py35
+        env: TOX_ENV=py35-pytest4
+      - python: 3.5
+        env: TOX_ENV=py35-pytest5
       - python: 3.6
-        env: TOX_ENV=py36
-      - python: 3.7-dev
-        env: TOX_ENV=py37
+        env: TOX_ENV=py36-pytest4
+      - python: 3.6
+        env: TOX_ENV=py36-pytest5
+      - python: 3.7
+        env: TOX_ENV=py37-pytest4
+      - python: 3.7
+        env: TOX_ENV=py37-pytest5
       - python: pypy
-        env: TOX_ENV=pypy
+        env: TOX_ENV=pypy-pytest4
+      - python: pypy
+        env: TOX_ENV=pypy-pytest5
 
 install:
   - pip install tox
