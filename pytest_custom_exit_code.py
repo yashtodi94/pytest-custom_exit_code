@@ -27,6 +27,5 @@ def pytest_sessionfinish(session, exitstatus):
             no_tests_collected = ExitCode.NO_TESTS_COLLECTED
             ok = ExitCode.OK
 
-
         if exitstatus == no_tests_collected:
             session.exitstatus = ok
