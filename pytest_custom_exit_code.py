@@ -16,6 +16,17 @@ def pytest_addoption(parser):
 @pytest.hookimpl(trylast=True)
 def pytest_sessionfinish(session, exitstatus):
     if session.config.getoption('--suppress-no-test-exit-code'):
-        from _pytest.main import EXIT_NOTESTSCOLLECTED, EXIT_OK
-        if exitstatus == EXIT_NOTESTSCOLLECTED:
-            session.exitstatus = EXIT_OK
+        try:
+            # Before pytest 5 the values were contants
+            from _pytest.main import EXIT_NOTESTSCOLLECTED, EXIT_OK
+            no_tests_collected = EXIT_NOTESTSCOLLECTED
+            ok = EXIT_OK
+        except ImportError:
+            # From pytest 5 on the values are inside an enum
+            from _pytest.main import ExitCode
+            no_tests_collected = ExitCode.NO_TESTS_COLLECTED
+            ok = ExitCode.OK
+
+
+        if exitstatus == no_tests_collected:
+            session.exitstatus = ok
