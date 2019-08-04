@@ -23,7 +23,7 @@ def pytest_sessionfinish(session, exitstatus):
             ok = EXIT_OK
         except ImportError:
             # From pytest 5 on the values are inside an enum
-            from _pytest.main import ExitCode
+            from pytest import ExitCode
             no_tests_collected = ExitCode.NO_TESTS_COLLECTED
             ok = ExitCode.OK
 
