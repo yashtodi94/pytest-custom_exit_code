@@ -50,6 +50,8 @@ Usage
 
     pytest --suppress-no-test-exit-code
 
+    pytest --suppress-tests-failed-exit-code
+
 Contributing
 ------------
 Contributions are very welcome. Tests can be run with `tox`_, please ensure
