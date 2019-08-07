@@ -13,7 +13,7 @@ def read(fname):
 
 setup(
     name='pytest-custom_exit_code',
-    version='0.2.1',
+    version='0.3.0',
     author='Yash Todi',
     author_email='yashtodi94@gmail.com',
     maintainer='Yash Todi',
